@@ -12,22 +12,28 @@ public class Alumno {
     private int edad;
     
     // Foreign Key
-    Curso curso;
+    private int curso;
 
-    // Constructor vacio para APIS y Frameworks
+    /**
+     * Constructor vacio para API'S y Frameworks.
+    */
     public Alumno() {
     }
 
-    // Constructor con todo menos ID para INSERTS, ya que el ID se lo pone la DB, no el usuario.
-    public Alumno(String nombre, String apellido, int edad, Curso curso) {
+    /**
+     * Constructor casi total, sin ID. Para los INSERT. Ya que el ID es puesto automaticamente por la DB, no el usuario.
+    */
+    public Alumno(String nombre, String apellido, int edad, int curso) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.curso = curso;
     }
 
-    // Constructor completo para los SELECT.
-    public Alumno(int id, String nombre, String apellido, int edad, Curso curso) {
+    /**
+     * Constructor parametrico total. Devuelve todos los campos de la tabla. Para los SELECT
+    */
+    public Alumno(int id, String nombre, String apellido, int edad, int curso) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -67,11 +73,11 @@ public class Alumno {
         this.edad = edad;
     }
 
-    public Curso getCurso() {
+    public int getCurso() {
         return curso;
     }
 
-    public void setCurso(Curso curso) {
+    public void setCurso(int curso) {
         this.curso = curso;
     }
 

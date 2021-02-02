@@ -14,10 +14,15 @@ public class Curso {
     Dia dia;
     Turno turno;
     
-    // Constructor vacio para herramientas que lo utilicen para crear un objeto vacio y agregarle estado mediantes getters y setters.
+    
+    /**
+     * Constructor vacio para API'S y Frameworks.
+    */
     public Curso(){}
 
-    // Constructor completo. Para los SELECT. Que devuelve todos los campos de la tabla.
+    /**
+     * Constructor parametrico total. Devuelve todos los campos de la tabla. Para los SELECT
+     */
     public Curso(int id, String titulo, String profesor, Dia dia, Turno turno) {
         this.id = id;
         this.titulo = titulo;
@@ -26,7 +31,9 @@ public class Curso {
         this.turno = turno;
     }
 
-    // Constructor con todo menos ID, para los INSERT. Ya que el ID no se lo pone el usuario, sino la DB.
+    /**
+     * Constructor casi total, sin ID. Para los INSERT. Ya que el ID es puesto automaticamente por la DB, no el usuario.
+    */
     public Curso(String titulo, String profesor, Dia dia, Turno turno) {
         this.titulo = titulo;
         this.profesor = profesor;

@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 
 public class Connector {
     
+    // Detalles de la conexion a usar:
+    
     // Driver a utilizar
     private static String driver = "org.mariadb.jdbc.Driver";
     
