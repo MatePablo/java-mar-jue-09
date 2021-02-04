@@ -1,4 +1,4 @@
-package ar.com.eduit.curso.java.collections;
+package collections;
 public class Auto {
     private String marca;
     private String modelo;
