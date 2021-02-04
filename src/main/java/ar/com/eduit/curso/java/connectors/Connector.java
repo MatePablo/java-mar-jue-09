@@ -24,6 +24,8 @@ public class Connector {
     
     
     // Constructor privado del objeto conn
+    
+    // El constructor es privado para que no se pueda crear un nuevo objeto de la clase Connection. Asi solo hay una sola conexion.
     private Connector(){}
     
     // Retorna la conexion bajo un entorno controlado.    
@@ -33,6 +35,8 @@ public class Connector {
     
         (Esto se hace siguiendo un patron de diseño llamado "Singleton", el cual asegura una unica instancia de la clase Connector)
     */
+    
+    // El unico metodo publico es getConnection, que asegura que solo se entregue un objeto de conection. 
     public synchronized static Connection getConnection(){
         
         try {
